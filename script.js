@@ -71,10 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     animateWaves();
 
-    // ========================
     // ELEMENTS ANIMATION (IntersectionObserver)
-    // ========================
-    const observerOptions = { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.15 };
 
     const animateObserver = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
@@ -86,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.service-card, .stat-item, .contact-item, footer').forEach(el => {
+    document.querySelectorAll('.service-card, .stat-item, .contact-item,').forEach(el => {
         el.classList.add('animate-hidden');
         animateObserver.observe(el);
     });
