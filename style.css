@@ -812,3 +812,17 @@ a:visited {
     color: var(--white);
     font-size: 15px;
 }
+
+/* estado inicial escondido */
+.animate-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    will-change: opacity, transform;
+}
+
+/* quando entrar na viewport */
+.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
